@@ -235,7 +235,7 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
                 }
             );
         },
-                /**
+        /**
          * Load the ckxyz widget via chilipeppr.load().
          */
         loadCkXyzWidget: function(callback) {
@@ -258,6 +258,30 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
               }
             );      
         },
+        /**
+         * Load the ckxyz widget via chilipeppr.load().
+         */
+        loadCkTabsWidget: function(callback) {
+
+
+            chilipeppr.load(
+              "#net-fka-ck-tabs-instance",
+              "http://raw.githubusercontent.com/jbkarle/cktabs/master/auto-generated-widget.html",
+              function() {
+                // Callback after widget loaded into #myDivNetFkaCkTabs
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+                  ["inline:net-fka-ck-tabs"], // the id you gave your widget
+                  function(myObjNetFkaCkTabs) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / Tabs just got loaded.", myObjNetFkaCkTabs);
+                    myObjNetFkaCkTabs.init();
+                  }
+                );
+              }
+            );     
+        },
+
         /**
          * Load the Serial Port JSON Server widget via chilipeppr.load()
          */
