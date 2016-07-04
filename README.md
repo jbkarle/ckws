@@ -142,7 +142,7 @@ and inits them.</td></tr><tr valign="top"><td>getBillboard</td><td>function</td>
 is used by the home page, the workspace picker, and the fork pulldown to show a
 consistent name/image/description tag for the workspace throughout the ChiliPeppr ecosystem.</td></tr><tr valign="top"><td>addBillboardToWorkspaceMenu</td><td>function</td><td>function () <br><br>Inject the billboard into the Workspace upper right corner pulldown which
 follows the standard template for workspace pulldown menus.</td></tr><tr valign="top"><td>setupResize</td><td>function</td><td>function () <br><br>Listen to window resize event.</td></tr><tr valign="top"><td>onResize</td><td>function</td><td>function () <br><br>When browser window resizes, forcibly resize the Console window</td></tr><tr valign="top"><td>loadTemplateWidget</td><td>function</td><td>function (callback) <br><br>Load the Template widget via chilipeppr.load() so folks have a sample
-widget they can fork as a starting point for their own.</td></tr><tr valign="top"><td>loadCkXyzWidget</td><td>function</td><td>function (callback) <br><br>Load the ckxyz widget via chilipeppr.load().</td></tr><tr valign="top"><td>loadCkTabsWidget</td><td>function</td><td>function (callback) <br><br>Load the ckxyz widget via chilipeppr.load().</td></tr>
+widget they can fork as a starting point for their own.</td></tr><tr valign="top"><td>loadCkXyzWidget</td><td>function</td><td>function (callback) <br><br>Load the ckxyz widget via chilipeppr.load().</td></tr><tr valign="top"><td>loadCkTabsWidget</td><td>function</td><td>function (callback) <br><br>Load the cktabs widget via chilipeppr.load().</td></tr>
       </tbody>
   </table>
 

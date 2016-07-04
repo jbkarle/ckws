@@ -71,6 +71,7 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
 */            
             this.loadTemplateWidget();
             this.loadCkXyzWidget();
+            this.loadCkTabsWidget()
             
             // Create our workspace upper right corner triangle menu
 //            this.loadWorkspaceMenu();
@@ -164,7 +165,7 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
             );      
         },
         /**
-         * Load the ckxyz widget via chilipeppr.load().
+         * Load the cktabs widget via chilipeppr.load().
          */
         loadCkTabsWidget: function(callback) {
 
