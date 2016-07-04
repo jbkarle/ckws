@@ -70,6 +70,7 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
             });
 */            
             this.loadTemplateWidget();
+            this.loadCkXyzWidget();
             
             // Create our workspace upper right corner triangle menu
 //            this.loadWorkspaceMenu();
@@ -139,9 +140,33 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
                 }
             );
         },
+                /**
+         * Load the ckxyz widget via chilipeppr.load().
+         */
+        loadCkXyzWidget: function(callback) {
+
+
+            chilipeppr.load(
+              "#net-fka-ck-xyz-instance",
+              "http://raw.githubusercontent.com/jbkarle/ckxyz/master/auto-generated-widget.html",
+              function() {
+                // Callback after widget loaded into #myDivNetFkaCkXyz
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+                  ["inline:net-fka-ck-xyz"], // the id you gave your widget
+                  function(myObjNetFkaCkXyz) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / XYZ Axes just got loaded.", myObjNetFkaCkXyz);
+                    myObjNetFkaCkXyz.init();
+                  }
+                );
+              }
+            );      
+        },
         /**
          * Load the Serial Port JSON Server widget via chilipeppr.load()
          */
+/*
         loadSpjsWidget: function(callback) {
 
             var that = this;
@@ -171,9 +196,11 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
                 }
             );
         },
+*/
         /**
          * Load the Console widget via chilipeppr.load()
          */
+/*
         loadConsoleWidget: function(callback) {
             var that = this;
             chilipeppr.load(
@@ -202,10 +229,12 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
                 }
             );
         },
+*/
         /**
          * Load the workspace menu and show the pubsubviewer and fork links using
          * our pubsubviewer widget that makes those links for us.
          */
+/*
         loadWorkspaceMenu: function(callback) {
             // Workspace Menu with Workspace Billboard
             var that = this;
@@ -228,5 +257,6 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
                 }
             );
         },
+*/        
     }
 });
