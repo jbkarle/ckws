@@ -62,18 +62,19 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
         init: function() {
 
             // Most workspaces will instantiate the Serial Port JSON Server widget
-            this.loadSpjsWidget();
+//            this.loadSpjsWidget();
             // Most workspaces will instantiate the Serial Port Console widget
+/*
             this.loadConsoleWidget(function() {
                 setTimeout(function() { $(window).trigger('resize'); }, 100);
             });
-            
+*/            
             this.loadTemplateWidget();
             
             // Create our workspace upper right corner triangle menu
-            this.loadWorkspaceMenu();
+//            this.loadWorkspaceMenu();
             // Add our billboard to the menu (has name, url, picture of workspace)
-            this.addBillboardToWorkspaceMenu();
+//            this.addBillboardToWorkspaceMenu();
             
             // Setup an event to react to window resize. This helps since
             // some of our widgets have a manual resize to cleanly fill

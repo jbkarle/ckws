@@ -41,7 +41,7 @@
 .well, div.panel.panel-default {
     margin-bottom:10px;
 }
-
+/*
 .billboard-content {
     padding: 6px 20px;
 }
@@ -50,6 +50,7 @@
 }
 .billboard-url {
     /* font-size: 9px; */
+/*
     padding-top:0px;
     margin-bottom:6px;
     font-size:12px;
@@ -75,6 +76,7 @@
 .billboard-desc {
     /* font-size:11px; */
 }
+/*
 .billboard-detail-title {
     font-weight: bold;
 }
@@ -86,6 +88,7 @@
     padding: 4px 10px 10px 10px;
     background-color: rgba(255, 255, 255, 0.5);
 }
+*/
     </style>
 
     <script type='text/javascript'>
@@ -154,18 +157,19 @@ cpdefine("inline:net-fka-ck-ws", ["chilipeppr_ready"], function() {
         init: function() {
 
             // Most workspaces will instantiate the Serial Port JSON Server widget
-            this.loadSpjsWidget();
+//            this.loadSpjsWidget();
             // Most workspaces will instantiate the Serial Port Console widget
+/*
             this.loadConsoleWidget(function() {
                 setTimeout(function() { $(window).trigger('resize'); }, 100);
             });
-            
+*/            
             this.loadTemplateWidget();
             
             // Create our workspace upper right corner triangle menu
-            this.loadWorkspaceMenu();
+//            this.loadWorkspaceMenu();
             // Add our billboard to the menu (has name, url, picture of workspace)
-            this.addBillboardToWorkspaceMenu();
+//            this.addBillboardToWorkspaceMenu();
             
             // Setup an event to react to window resize. This helps since
             // some of our widgets have a manual resize to cleanly fill
